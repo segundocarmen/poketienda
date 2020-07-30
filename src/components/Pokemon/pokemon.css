@@ -1,0 +1,38 @@
+.pokemon{
+    margin: auto;
+}
+a.name_pokemon{
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: darkslategray;
+    font-family: system-ui;
+    letter-spacing: 1px;
+    font-size: 18px;
+    border: 1px solid #eee;
+}
+a.name_pokemon:hover{
+    background-color: darkslategray;
+    color: #fff;
+}
+
+.container_pokedex{
+    width: 400px;
+    background-color:#d5d5d5;
+    border-radius: 1em;
+    padding: 1em;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.btnAdd{
+    padding: 10px;
+    border: 1px solid darkslategray;
+    border-radius: 8px;
+    min-width: 100px;
+    cursor: pointer;
+}
+.btnAdd:hover{
+    background-color: darkslategray;
+    color: #fff;
+}
