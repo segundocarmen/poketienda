@@ -15,6 +15,7 @@ const Pokemon = (props) =>{
                 qty: 1
             }
             localStorage.setItem(NameLS,JSON.stringify([detail]));
+            props.OnAddPokemon(1);
         }else{
             const carritoDecoded = JSON.parse(carrito);
             const exist = _.filter(carritoDecoded,function(o){return o.name == props.name});
@@ -33,7 +34,14 @@ const Pokemon = (props) =>{
                 localStorage.setItem(NameLS,JSON.stringify(carritoDecoded));
             }
 
+            let cantidad = 0;
+            carritoDecoded.map((item,index)=>{
+                const qty = parseInt(item.qty);
+                cantidad = cantidad + qty;
+            })
+            props.OnAddPokemon(cantidad);
         }
+        
     }
 
     return(
